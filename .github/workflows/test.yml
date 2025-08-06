@@ -1,0 +1,16 @@
+name: Test Hello Script
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-test-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run test_hello.sh
+        run: bash test_hello.sh
